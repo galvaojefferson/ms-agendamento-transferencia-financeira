@@ -1,0 +1,60 @@
+{
+  "info": {
+    "_postman_id": "56077ba1-0322-44f2-ac0e-2fc99a7f0c89",
+    "name": "ms-agendamento-transferencia-financeira",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "2229984"
+  },
+  "item": [
+    {
+      "name": "cadastrar-agendamento",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"contaOrigem\": \"12345-1\",\n    \"contaDestino\": \"54321-2\",\n    \"valorTransferencia\": 3.00,\n    \"dataTransferencia\": 0\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "localhost:8080/api/v1/transferencia",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "v1",
+            "transferencia"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "consultar-extrato",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "localhost:8080/api/v1/transferencia/extrato",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "v1",
+            "transferencia",
+            "extrato"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
